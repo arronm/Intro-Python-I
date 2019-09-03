@@ -9,8 +9,8 @@ https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 # Print all the contents of the file, then close the file
 
 # YOUR CODE HERE
-foo = open(foo.txt)
-print(foo.read)
+foo = open('src/foo.txt')
+print(foo.read())
 foo.close()
 
 # Open up a file called "bar.txt" (which doesn't exist yet) for
@@ -19,3 +19,6 @@ foo.close()
 # sure that it contains what you expect it to contain
 
 # YOUR CODE HERE
+bar = open('src/bar.txt', 'w')
+bar.write('one\ntwo\nthree')
+bar.close()
