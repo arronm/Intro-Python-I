@@ -22,3 +22,11 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+try:
+  now = datetime.now()
+  month = int(sys.argv[1]) if len(sys.argv) > 1 else now.month
+  year = int(sys.argv[2]) if len(sys.argv) > 2 else now.year
+  print(calendar.month(year, month))
+except:
+  print('Please add an integer for the month (1-12) and an optional integer for the year e.g. 2019')
